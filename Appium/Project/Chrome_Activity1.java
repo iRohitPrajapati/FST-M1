@@ -45,9 +45,11 @@ public class Chrome_Activity1 {
 			driver.findElementById("negative_button").click();
 		}
 		finally {
+			// Wait
+			wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.xpath("//android.widget.Button[@text='Login']")));
+			try {driver.findElementById("infobar_close_button").click();}catch(Exception e) {}
 			// Scroll
-			driver.findElement(MobileBy.AndroidUIAutomator("UiScrollable(UiSelector().scrollable(true)).scrollIntoView(text(\"To-Do List\")")).click();
-			
+			driver.findElement(MobileBy.AndroidUIAutomator("UiScrollable(UiSelector().scrollable(true)).scrollIntoView(text(\"To-Do List\"))")).click();
 			// Add tasks
 			wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.id("taskInput")));
 			String tasks[] = {"Add tasks to list","Get number of tasks","Clear the list"};
