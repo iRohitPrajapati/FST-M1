@@ -49,7 +49,7 @@ public class Chrome_Activity2 {
 			wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.xpath("//android.widget.Button[@text='Login']")));
 			try {driver.findElementById("infobar_close_button").click();}catch(Exception e) {}
 			// Scroll
-			driver.findElement(MobileBy.AndroidUIAutomator("UiScrollable(UiSelector().scrollable(true)).scrollIntoView(text(\"Login Form\")")).click();
+			driver.findElement(MobileBy.AndroidUIAutomator("UiScrollable(UiSelector().scrollable(true)).scrollIntoView(text(\"Login Form\"))")).click();
 			
 			// Invalid Credentials
 			wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.id("username"))).sendKeys("adm");
