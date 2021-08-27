@@ -27,7 +27,17 @@ public class LoginTestSteps {
 		// Login
 		driver.findElement(By.xpath("//button[text()='Log in']")).click();
 	}
-
+	
+	@When("^User enters \"(.*)\" and \"(.*)\"$")	
+	public void user_enters_and(String username, String password) {
+	    // Enter Username
+		driver.findElement(By.id("username")).sendKeys(username);
+		// Enter Password
+		driver.findElement(By.id("password")).sendKeys(password);
+		// Login
+		driver.findElement(By.xpath("//button[text()='Log in']")).click();
+	}
+	
 	@Then("^Read the page title$")
 	public void read_the_page_title() {
 	    // Read Page Title
