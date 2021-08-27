@@ -9,7 +9,9 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions (
     features = "Features",
     glue = {"stepDefinitions"},
-    tags = "@activity1_3"
+    tags = "@activity2_5"
+    plugin = {"html: test-reports"},
+    monochrome = true
 )
 
 public class ActivitiesRunner {
